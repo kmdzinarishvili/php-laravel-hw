@@ -15,10 +15,19 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
             $table->String('title');
             $table->integer("likes");
             $table->text("post_text");
+            /*
+             * $table->foreign('user_id');
+             *      ->references('id')
+             *      ->on('users')
+             *      ->onDelete('cascade');
+             *
+             * //if user is deleted, post is deleted too
+             */
         });
     }
 

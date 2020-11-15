@@ -1,6 +1,8 @@
 @extends("layout.layout")
 
 @section("content")
+    <a href="{{ url('/posts') }}" class="text-sm text-gray-700 underline"> Home </a>
+    <a href="{{ url('/my-posts') }}" class="text-sm text-gray-700 underline"> My Posts </a>
 
     <form method="post" enctype="multipart/form-data" action ="{{route('posts.update', $post->id)}}">
         @csrf
@@ -18,10 +20,7 @@
                     <br>
 
                     <button id="edit-button" type="submit">SAVE</button>
-
         </div>
-
-
 
     </form>
 

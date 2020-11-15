@@ -37,7 +37,7 @@ class PostController extends Controller
 //            "post_text"=>"required|min:2",
 //            "likes"=>"required"
 //        ];
-
+//
 //        $messages = [
 //            'required' => 'The :attribute field is required!!!!',
 //        ];

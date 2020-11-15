@@ -6,7 +6,12 @@
     @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
-                <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                <a href="{{ url('/posts') }}" class="text-sm text-gray-700 underline"> Home </a>
+                <a href="{{ url('/my-posts') }}" class="text-sm text-gray-700 underline"> My Posts </a>
+                <a href="{{ url('/logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                <form id="logout-form" action="{{route('logout')}}" method="POST">
+                    {{csrf_field()}}
+                </form>
             @else
                 <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
 
@@ -41,6 +46,7 @@
                                 {{$post->post_text}}
                             </div>
                         </div>
+                        <h4>Author:  {{App\Models\Post::find(1)->user->name}}</h4>
                     </div>
 
             </div>

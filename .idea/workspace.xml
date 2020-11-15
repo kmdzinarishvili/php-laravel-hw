@@ -23,10 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f24caaa9-50e9-4c40-b7c5-0c3105fa1e6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/my_posts.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_012949_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_012949_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/PostSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/PostSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +175,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="SQL Updates" />
     <property name="database.data.extractors.current.id" value="SQL Updates" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practice" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -200,7 +210,16 @@
       <workItem from="1603043781176" duration="3740000" />
       <workItem from="1603047649553" duration="804000" />
       <workItem from="1603654551569" duration="6868000" />
-      <workItem from="1603662737985" duration="993000" />
+      <workItem from="1603662737985" duration="1514000" />
+      <workItem from="1603664569020" duration="64000" />
+      <workItem from="1603670588137" duration="1260000" />
+      <workItem from="1603724555538" duration="1667000" />
+      <workItem from="1603726275263" duration="918000" />
+      <workItem from="1603727218616" duration="1317000" />
+      <workItem from="1603728876551" duration="76000" />
+      <workItem from="1603729726104" duration="901000" />
+      <workItem from="1605442600556" duration="1573000" />
+      <workItem from="1605444247933" duration="16798000" />
     </task>
     <servers />
   </component>
@@ -225,6 +244,16 @@
     </state>
     <state x="107" y="129" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.827.786@72.27.827.786" timestamp="1602468414677" />
     <state x="110" y="145" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.886.913@72.27.886.913" timestamp="1603029525397" />
+    <state x="248" y="241" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605463107017">
+      <screen x="72" y="27" width="886" height="913" />
+    </state>
+    <state x="248" y="241" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.886.913@72.27.886.913" timestamp="1605463107017" />
+    <state x="543" y="243" width="424" height="491" key="FileChooserDialogImpl" timestamp="1605456787828">
+      <screen x="72" y="27" width="1848" height="923" />
+    </state>
+    <state x="383" y="241" key="FileChooserDialogImpl/72.27.1219.913@72.27.1219.913" timestamp="1603727225644" />
+    <state x="543" y="243" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.923@72.27.1848.923" timestamp="1605456787828" />
+    <state x="298" y="241" width="424" height="491" key="FileChooserDialogImpl/72.27.886.913@72.27.886.913" timestamp="1605451691042" />
     <state width="840" height="229" key="GridCell.Tab.0.bottom" timestamp="1602464086306">
       <screen x="72" y="27" width="886" height="913" />
     </state>
@@ -266,9 +295,10 @@
       <screen x="72" y="27" width="1123" height="913" />
     </state>
     <state x="366" y="291" width="524" height="391" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/72.27.1123.913@72.27.1123.913" timestamp="1603032400897" />
-    <state x="171" y="224" width="674" height="678" key="search.everywhere.popup" timestamp="1603045131556">
-      <screen x="72" y="27" width="829" height="913" />
+    <state x="293" y="226" width="1503" height="686" key="search.everywhere.popup" timestamp="1605465952716">
+      <screen x="72" y="27" width="1848" height="923" />
     </state>
+    <state x="293" y="226" width="1503" height="686" key="search.everywhere.popup/72.27.1848.923@72.27.1848.923" timestamp="1605465952716" />
     <state x="171" y="224" width="672" height="678" key="search.everywhere.popup/72.27.827.913@72.27.827.913" timestamp="1603035989663" />
     <state x="171" y="224" width="674" height="678" key="search.everywhere.popup/72.27.829.913@72.27.829.913" timestamp="1603045131556" />
     <state x="178" y="224" width="672" height="678" key="search.everywhere.popup/72.27.886.913@72.27.886.913" timestamp="1603031406539" />

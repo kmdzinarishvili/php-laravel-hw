@@ -18,6 +18,7 @@ class PostSeeder extends Seeder
     public function run()
     {
         DB::table('posts')->insert([
+            'user_id'=>1,
             'title' => Str::random(10),
             'post_text' => Str::random(100),
             'likes' => rand(),

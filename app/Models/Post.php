@@ -15,5 +15,8 @@ class Post extends Model
         'post_text',
         'likes'
     ];
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 
 }

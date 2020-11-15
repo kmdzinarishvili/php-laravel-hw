@@ -53,27 +53,35 @@
         <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
             <div class="grid grid-cols-1 md:grid-cols-2">
 
-
+                <h3>Name:  {{auth()->user()->name}}</h3>
+                <br>
+                <h3>Email:  {{auth()->user()->email}}</h3>
+                <br>
+                <h3>Posts: </h3>
+                <br>
+                <a href="{{url('/post/create')}}">Make New Post</a>
                 @foreach($posts as $post)
-                <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                    <div class="flex items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                        <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{route('posts.show', $post->id)}}" class="underline text-gray-900 dark:text-white">{{$post->title}}</a></div>
-                    </div>
-                    <a href="{{route("posts.edit", $post->id)}}">edit</a>
-                    <form method="post" action="{{route('posts.delete', $post->id)}}">
-                        @csrf
-                        @method("DELETE")
-                        <button type="submit">delete</button>
-                    </form>
-
-                    <div class="ml-12">
-                        <div style="overflow-wrap: break-word;" class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                            {{$post->post_text}}
+                    @if($post->user->name == auth()->user()->name)
+                    <div class="p-6 border-t border-gray-200 dark:border-gray-700">
+                        <div class="flex items-center">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                            <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{route('posts.show', $post->id)}}" class="underline text-gray-900 dark:text-white">{{$post->title}}</a></div>
                         </div>
+                        <a href="{{route("posts.edit", $post->id)}}">edit</a>
+                        <form method="post" action="{{route('posts.delete', $post->id)}}">
+                            @csrf
+                            @method("DELETE")
+                            <button type="submit">delete</button>
+                        </form>
+
+                        <div class="ml-12">
+                            <div style="overflow-wrap: break-word;" class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                {{$post->post_text}}
+                            </div>
+                        </div>
+                        <h4>Author:  {{App\Models\Post::find(1)->user->name}}</h4>
                     </div>
-                    <h4>Author:  {{App\Models\Post::find($post->id)->user->name}}</h4>
-                </div>
+                    @endif
                 @endforeach
 
             </div>
