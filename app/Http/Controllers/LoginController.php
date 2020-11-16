@@ -33,7 +33,7 @@ class LoginController extends Controller
             return view('user.login');
 
         }
-        public function postLogin(Request $request){
+        public function postLogin(LoginRequest $request){
             //LoginRequests rom viyenebdi errors migdebda
             $request = $request->validate([
                 'email' => 'required',
