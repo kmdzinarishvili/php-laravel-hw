@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\SavePostRequest;
 use App\Models\Post;
 
+use App\Models\Tag;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -25,41 +27,30 @@ class PostController extends Controller
 
     }
     public function create(){
-        return view("create");
+        $tags = Tag::all();
+        return view("create")->with('tags', $tags);
     }
 
     public function save(SavePostRequest $request){
-        //best not to write this in controller
-        //best to take this in model
-
-//        $request_rules = [
-//            "title"=>["required", "max:255", "min:3"],
-//            "post_text"=>"required|min:2",
-//            "likes"=>"required"
-//        ];
-//
-//        $messages = [
-//            'required' => 'The :attribute field is required!!!!',
-//        ];
-//
-//        $validator = Validator::make($request->all(), $request_rules, $messages);
-//        $validator->validate();
-        //we can do more than just check required
 
         $post = new Post($request->all());
+        $post->user()->associate(Auth::user());
         $post ->save();
-        return redirect()->back();
+        $post->tags()->attach($request->tags);
+        $id = $post->id;
+        return redirect()->route("posts.show",$id);
     }
 
     public function edit($id){
         $post=Post::findOrFail($id);
-
-        return view("edit")->with("post",$post);
+        $tags = Tag::all();
+        return view("edit")->with(["post"=>$post, "tags"=>$tags]);
     }
 
     public function update(Request $request, $id){
         $post = Post::findOrFail($id);
         $post->update($request->all());
+        $post->tags()->sync((array)$request->input('tags'));
 
         return redirect()->route("posts.show",$id);
     }

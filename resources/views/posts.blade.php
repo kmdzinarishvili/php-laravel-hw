@@ -73,6 +73,14 @@
                         </div>
                     </div>
                     <h4>Author:  {{App\Models\Post::find($post->id)->user->name}}</h4>
+                    @foreach($post->tags as $tag)
+                        <div class="ml-12">
+                            <div style="color:#000080;" class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                {{$tag['name']}}
+                            </div>
+                        </div>
+
+                    @endforeach
                 </div>
                 @endforeach
 

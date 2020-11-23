@@ -12,12 +12,25 @@
                     <input id="title_inp" type="text" class="form-control" value="{{old("title", $post->title)}}" name="title">
                     <hr>
                     <label for="inputText">Input Text</label>
-                    <input id="inputText" type="text" class="form-control" value="{{old("title", $post->post_text)}}"  name="post_text"/>
+                    <input id="inputText" type="text" class="form-control" value="{{old("text", $post->post_text)}}"  name="post_text"/>
 
                     <hr>
                     <label for="likes_inp">Likes</label>
-                    <input id="likes_inp" type="text" class="form-control" value="{{old("title", $post->likes)}}"  name="likes"/>
+                    <input id="likes_inp" type="text" class="form-control" value="{{old("text", $post->likes)}}"  name="likes"/>
                     <br>
+            <select name="tags[]" id="tags" multiple>
+                @foreach($tags as $tag)
+                    {{$has_tag = DB::table('post_tag')->where('post_id', '=', $post->id)->where('tag_id', '=', $tag->id)->exists()}}
+                    @if($has_tag)
+                        <option value="{{$tag->id}}" selected="selected">{{$tag->name}}</option>
+                    @else
+                        <option value="{{$tag->id}}">{{$tag->name}}</option>
+                    @endif
+
+                @endforeach
+
+
+            </select>
 
                     <button id="edit-button" type="submit">SAVE</button>
         </div>

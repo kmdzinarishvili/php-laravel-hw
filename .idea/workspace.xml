@@ -23,8 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f24caaa9-50e9-4c40-b7c5-0c3105fa1e6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/13510a52-cebf-4016-93d7-877730c0ec28.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/13510a52-cebf-4016-93d7-877730c0ec28.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +171,7 @@
     <property name="database.data.extractors.current.id" value="SQL Updates" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../practice" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -206,7 +213,8 @@
       <workItem from="1603728876551" duration="76000" />
       <workItem from="1603729726104" duration="901000" />
       <workItem from="1605442600556" duration="1573000" />
-      <workItem from="1605444247933" duration="18347000" />
+      <workItem from="1605444247933" duration="19854000" />
+      <workItem from="1606051831603" duration="8590000" />
     </task>
     <servers />
   </component>
@@ -261,9 +269,14 @@
       <screen x="72" y="27" width="886" height="913" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/72.27.886.913@72.27.886.913" timestamp="1602921545340" />
-    <state x="72" y="118" width="886" height="737" key="SettingsEditor" timestamp="1602466091475">
-      <screen x="72" y="27" width="886" height="913" />
+    <state x="791" y="414" width="399" height="156" key="NewPhpFileDialog" timestamp="1606055019981">
+      <screen x="72" y="27" width="1848" height="923" />
     </state>
+    <state x="791" y="414" width="399" height="156" key="NewPhpFileDialog/72.27.1848.923@72.27.1848.923" timestamp="1606055019981" />
+    <state x="72" y="119" width="886" height="737" key="SettingsEditor" timestamp="1606054605335">
+      <screen x="72" y="27" width="1848" height="923" />
+    </state>
+    <state x="72" y="119" key="SettingsEditor/72.27.1848.923@72.27.1848.923" timestamp="1606054605335" />
     <state x="72" y="118" width="886" height="737" key="SettingsEditor/72.27.886.913@72.27.886.913" timestamp="1602466091475" />
     <state x="412" y="361" width="196" height="251" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1603027314994">
       <screen x="72" y="27" width="886" height="913" />
@@ -273,15 +286,17 @@
       <screen x="72" y="27" width="886" height="913" />
     </state>
     <state x="412" y="373" width="367" height="255" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/72.27.886.913@72.27.886.913" timestamp="1603027332613" />
-    <state x="105" y="141" width="824" height="691" key="com.intellij.database.dbimport.ImportDialog" timestamp="1603032408846">
-      <screen x="72" y="27" width="1123" height="913" />
+    <state x="126" y="142" width="824" height="691" key="com.intellij.database.dbimport.ImportDialog" timestamp="1606054571683">
+      <screen x="72" y="27" width="1848" height="923" />
     </state>
     <state x="105" y="141" key="com.intellij.database.dbimport.ImportDialog/72.27.1123.913@72.27.1123.913" timestamp="1603032408846" />
+    <state x="126" y="142" key="com.intellij.database.dbimport.ImportDialog/72.27.1848.923@72.27.1848.923" timestamp="1606054571683" />
     <state x="98" y="141" width="824" height="691" key="com.intellij.database.dbimport.ImportDialog/72.27.886.913@72.27.886.913" timestamp="1603027323335" />
-    <state x="366" y="291" width="524" height="391" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1603032400897">
-      <screen x="72" y="27" width="1123" height="913" />
+    <state x="556" y="294" width="524" height="391" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1606054566156">
+      <screen x="72" y="27" width="1848" height="923" />
     </state>
     <state x="366" y="291" width="524" height="391" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/72.27.1123.913@72.27.1123.913" timestamp="1603032400897" />
+    <state x="556" y="294" width="524" height="391" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/72.27.1848.923@72.27.1848.923" timestamp="1606054566156" />
     <state x="293" y="226" width="1503" height="686" key="search.everywhere.popup" timestamp="1605465952716">
       <screen x="72" y="27" width="1848" height="923" />
     </state>
