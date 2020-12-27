@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\DB;
 class PostController extends Controller
 {
     public function index(){
-        $post = Post::all();
+
+        $post = Post::with('tags')->get();
         return view('posts')->with("posts", $post);
 
     }
@@ -29,6 +30,10 @@ class PostController extends Controller
     public function create(){
         $tags = Tag::all();
         return view("create")->with('tags', $tags);
+    }
+    public function approve(Post $post){
+        $this->authorize('approve', $post);
+        dd("your post is approved");
     }
 
     public function save(SavePostRequest $request){
@@ -56,7 +61,9 @@ class PostController extends Controller
     }
     public function delete(Post $post){
         try {
+            $post->tags()->detach();
             $post->delete();
+
         } catch (\Exception $e) {
         }
         return redirect()->back();

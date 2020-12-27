@@ -35,6 +35,7 @@ class LoginController extends Controller
         }
         public function postLogin(LoginRequest $request){
             //LoginRequests rom viyenebdi errors migdebda
+            dd($request);
             $request = $request->validate([
                 'email' => 'required',
                 'password' => 'required',
