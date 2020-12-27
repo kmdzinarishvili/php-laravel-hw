@@ -37,3 +37,4 @@ Route::post('users/post-register', [\App\Http\Controllers\LoginController::class
 
 Route::get('/my-posts', [\App\Http\Controllers\LoginController::class, 'myPosts'])->name('my.posts');
 
+Route::post('/posts/{post}/approve', [\App\Http\Controllers\PostController::class, 'approve'])->name('approve');

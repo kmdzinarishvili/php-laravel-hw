@@ -31,13 +31,13 @@
                 <form id="logout-form" action="{{route('logout')}}" method="POST">
                     {{csrf_field()}}
                 </form>
-            @else
+            @elseauth
                 <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
 
                 @if (Route::has('register'))
                     <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
                 @endif
-            @endif
+            @endauth
         </div>
     @endif
 
@@ -66,6 +66,12 @@
                         @method("DELETE")
                         <button type="submit">delete</button>
                     </form>
+                    @can('approve', $post)
+                    <form method="post" action="{{route('approve', $post->id)}}">
+                        @csrf
+                        <button type="submit">approve</button>
+                    </form>
+                    @endcan
 
                     <div class="ml-12">
                         <div style="overflow-wrap: break-word;" class="mt-2 text-gray-600 dark:text-gray-400 text-sm">

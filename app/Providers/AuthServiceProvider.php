@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
+use Laravel\Passport\Passport;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -30,7 +31,9 @@ class AuthServiceProvider extends ServiceProvider
             if($user->is_admin){
                 return true;
             }
+            return false;
         });
+        Passport::routes();
 //        Gate::define("approve", function(User $user,Post $post){
 //            return $user->id === $post->user->id;
 //        });
