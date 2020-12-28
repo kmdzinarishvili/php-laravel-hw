@@ -23,16 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f24caaa9-50e9-4c40-b7c5-0c3105fa1e6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/blog2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/ApiController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/my_posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/my_posts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,6 +187,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/API" />
       <recent name="$PROJECT_DIR$/resources/views" />
     </key>
   </component>
@@ -237,6 +235,7 @@
       <workItem from="1606754259472" duration="1506000" />
       <workItem from="1606755979311" duration="3960000" />
       <workItem from="1609082589764" duration="2385000" />
+      <workItem from="1609162264777" duration="4137000" />
     </task>
     <servers />
   </component>
@@ -320,13 +319,13 @@
     </state>
     <state x="366" y="291" width="524" height="391" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/72.27.1123.913@72.27.1123.913" timestamp="1603032400897" />
     <state x="556" y="294" width="524" height="391" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/72.27.1848.923@72.27.1848.923" timestamp="1606687155301" />
-    <state x="178" y="224" width="672" height="678" key="search.everywhere.popup" timestamp="1609102924450">
+    <state x="178" y="224" width="672" height="678" key="search.everywhere.popup" timestamp="1609104592248">
       <screen x="72" y="27" width="886" height="913" />
     </state>
     <state x="293" y="226" width="1503" height="686" key="search.everywhere.popup/72.27.1848.923@72.27.1848.923" timestamp="1606752111120" />
     <state x="171" y="224" width="672" height="678" key="search.everywhere.popup/72.27.827.913@72.27.827.913" timestamp="1603035989663" />
     <state x="171" y="224" width="674" height="678" key="search.everywhere.popup/72.27.829.913@72.27.829.913" timestamp="1603045131556" />
-    <state x="178" y="224" width="672" height="678" key="search.everywhere.popup/72.27.886.913@72.27.886.913" timestamp="1609102924450" />
+    <state x="178" y="224" width="672" height="678" key="search.everywhere.popup/72.27.886.913@72.27.886.913" timestamp="1609104592248" />
     <state x="191" y="224" width="809" height="679" key="search.everywhere.popup/72.27.994.913@72.27.994.913" timestamp="1606686856426" />
   </component>
 </project>
